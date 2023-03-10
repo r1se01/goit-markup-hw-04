@@ -368,14 +368,13 @@ img {
   border-radius: 4px;
 }
 .customers-icon {
-  fill: var(--lightslate);
+  fill: currentColor;
   margin: 0;
   padding: 0;
 }
 
 .customers-link:hover,
 .customers-link:focus {
-  fill: currentColor;
   color: var(--ocean);
   border-color: var(--ocean);
 }
@@ -430,16 +429,21 @@ img {
   display: flex;
   gap: 16px;
 }
-
-.social-media-item {
-  background-color: var(--lightslate);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+.hw-footer .container {
+  display: flex;
+  gap: 120px;
 }
 .social-media-item:hover,
 .social-media-item:focus {
-  color: var(--green);
+  background-color: var(--green);
+}
+
+.social-media-item {
+  background: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
 .social-media-link {
   display: flex;
@@ -563,6 +567,8 @@ img {
 .hero-btn:focus {
   color: var(--white);
   background-color: var(--ocean);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .hero-list:hover {
 }
@@ -603,6 +609,11 @@ img {
   border-left: 1px solid var(--cornflower);
   border-right: 1px solid var(--cornflower);
   border-bottom: 1px solid var(--cornflower);
+}
+.portfolio-text:hover,
+.portfolio-text:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-background {
   gap: 48px 24px;
