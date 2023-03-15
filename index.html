@@ -23,9 +23,9 @@
         </a>
 
         <ul class="hw-header-list list">
-          <li class="hw-header-item"><a href="./index.html" class="hw-header-link link">Studio</a></li>
-          <li class="hw-header-item"><a href="./portfolio.html"class="hw-header-link link">Portfolio</a></li>
-          <li class="hw-header-item"><a href=""class="hw-header-link link">Contacts</a></li>
+          <li class="hw-header-item"><a href="./index.html" class="hw-header-link link active">Studio</a></li>
+          <li class="hw-header-item"><a href="./portfolio.html"class="hw-header-link link active">Portfolio</a></li>
+          <li class="hw-header-item"><a href=""class="hw-header-link link active">Contacts</a></li>
         </ul>
       </nav>
 <address class="hw-header-address list">
@@ -44,7 +44,7 @@
         <h1 class="hw-hero-title">
           Effective Solutions for Your Business
         </h1>
-        <button class="hw-hero-btn" type="button">Order Service</button>
+        <button class="hw-hero-btn" data-modal-open type="button">Order Service</button>
         </div>
       </section>
 
@@ -327,5 +327,11 @@
 
       </div>
     </footer>
+<div class="backdrop is-hidden" data-modal>
+<div class="modal">
+<button type="button" data-modal-close class="modal-close">X</button>
+</div>
+</div>
+<script src="./js/main.js"></script>
   </body>
 </html>

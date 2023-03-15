@@ -9,6 +9,7 @@
   --cloud: #f4f4fd;
   --lightslate: #8e8f99;
   --green: #31d0aa;
+  --dairy: #fcfcfc;
 }
 h1,
 h2,
@@ -85,7 +86,26 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navyblue);
+  position: relative;
 }
+.hw-header-link:hover,
+.hw-header-link:focus {
+  color: var(--ocean);
+}
+.hw-header-link.active:hover::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 20;
+  display: block;
+  background-color: var(--ocean);
+  border-radius: 2px;
+  transition: var(--curent-color);
+  top: 42px;
+  position: absolute;
+}
+
 .hw-header {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -459,7 +479,70 @@ img {
 .container-media {
 }
 
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 0.35s linear, visibility 0.35s linear;
+}
+.modal {
+  width: 408px;
+  min-height: 576px;
+  background-color: var(--dairy);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%, -50%);
+}
+.modal-close {
+  width: 24px;
+  height: 24px;
+  background: var(--cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-left: auto;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* HW-1 */
+.box {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.box-item:hover .box-title {
+  transform: translateY(0);
+}
+.box-overlay {
+}
+.box-title {
+  padding: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--cloud);
+  position: absolute;
+  background-color: var(--iris);
+  transform: translateY(100%);
+  transition: transform 0.35s linear;
+}
 
 .header {
   border-bottom: 1px solid var(--cornflower);
@@ -516,6 +599,20 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navyblue);
+  position: relative;
+}
+.header-link:hover::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 20;
+  display: block;
+  background-color: var(--ocean);
+  border-radius: 2px;
+  transition: var(--curent-color);
+  top: 42px;
+  position: absolute;
 }
 .header-content {
   margin: 0;
